@@ -121,7 +121,8 @@ def getMessages(inbox):
                     "author": MESSAGE_AUTHOR,
                     "text": messageArray
                 }
-                messagesFormatted.append(inBOX)
+                if len(inBOX["text"]) != 0:
+                    messagesFormatted.append(inBOX)
         formattedArrayOfMessages = []
         for messageOne in messagesFormatted:
             if messageOne not in formattedArrayOfMessages:
